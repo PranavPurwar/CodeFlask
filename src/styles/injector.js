@@ -7,7 +7,7 @@ export function injectCss (css, styleName, parent) {
   }
 
   if (document.getElementById(CSS_ID)) {
-    return true
+        return true
   }
 
   const style = document.createElement('style')

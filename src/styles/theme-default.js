@@ -1,6 +1,7 @@
 export const BACKGROUND_COLOR = '#fff'
 export const LINE_HEIGHT = '20px'
-export const FONT_SIZE = '13px'
+export const FONT_SIZE = '16px'
+export const KEYWORD_COLOR = '#8500ff' // New variable for repeated color
 
 export const defaultCssTheme = `
 .codeflask {
@@ -13,7 +14,7 @@ export const defaultCssTheme = `
 }
 
 .codeflask .token.keyword {
-  color: #8500ff;
+  color: ${KEYWORD_COLOR}; // Updated to use variable
 }
 
 .codeflask .token.operator {
@@ -29,30 +30,30 @@ export const defaultCssTheme = `
 }
 
 .codeflask .token.function {
-  color: #8500ff;
+  color: ${KEYWORD_COLOR}; // Updated to use variable
 }
 
 .codeflask .token.boolean {
-  color: #8500ff;
+  color: ${KEYWORD_COLOR}; // Updated to use variable
 }
 
 .codeflask .token.number {
-  color: #8500ff;
+  color: ${KEYWORD_COLOR}; // Updated to use variable
 }
 
 .codeflask .token.selector {
-  color: #8500ff;
+  color: ${KEYWORD_COLOR}; // Updated to use variable
 }
 
 .codeflask .token.property {
-  color: #8500ff;
+  color: ${KEYWORD_COLOR}; // Updated to use variable
 }
 
 .codeflask .token.tag {
-  color: #8500ff;
+  color: ${KEYWORD_COLOR}; // Updated to use variable
 }
 
 .codeflask .token.attr-value {
-  color: #8500ff;
+  color: ${KEYWORD_COLOR}; // Updated to use variable
 }
 `

@@ -209,6 +209,13 @@ test('should not add line when enter pressed and readonly', async ({page}) => {
   expect(await lines.count()).toBe(1)
 })
 
+test('should enable word wrap when its set', async ({page}) => {
+  await page.evaluate(createEditorWithOptions, { lineNumbers: true, wordWrap: true })
+
+  let lines = page.locator('.codeflask__flatten.word-wrap')
+  expect(await lines.count()).toBe(1)  // initial blank line
+})
+
   // xit('should handle the tab key in the editor', function () {
   //   let flask_test
   //   browser.execute(() => {

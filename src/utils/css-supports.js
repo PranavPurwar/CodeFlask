@@ -11,11 +11,6 @@ export function cssSupports (property, value) {
 }
 
 export function toCamelCase (cssProperty) {
-  cssProperty = cssProperty
-    .split('-')
-    .filter(word => !!word)
-    .map(word => word[0].toUpperCase() + word.substr(1))
-    .join('')
-
-  return cssProperty[0].toLowerCase() + cssProperty.substr(1)
+  // Optimized to use regex for better performance
+  return cssProperty.replace(/-([a-z])/g, (g) => g[1].toUpperCase());
 }

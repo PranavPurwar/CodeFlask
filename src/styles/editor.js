@@ -11,9 +11,6 @@ export const editorCss = `
     width: 100%;
     height: 100%;
     overflow: hidden;
-  }
-
-  .codeflask, .codeflask * {
     box-sizing: border-box;
   }
 
@@ -27,14 +24,13 @@ export const editorCss = `
     background: none;
     border: none;
     color: ${COLOR};
-    z-index: 1;
     resize: none;
     font-family: ${FONT_FAMILY};
     -webkit-appearance: pre;
     caret-color: #111;
-    z-index: 2;
     width: 100%;
     height: 100%;
+    z-index: 2;
   }
 
   .codeflask--has-line-numbers .codeflask__textarea {
@@ -78,17 +74,19 @@ export const editorCss = `
 
   .codeflask__lines {
     padding: 10px 4px;
-    font-size: 12px;
+    font-size: 16px;
     line-height: ${LINE_HEIGHT};
     font-family: 'Cousine', monospace;
     position: absolute;
     left: 0;
     top: 0;
     width: ${LINE_NUMBER_WIDTH};
-    height: 100%;
+    min-height: 100%;
     text-align: right;
     color: #999;
-    z-index: 2;
+    border-right: 1px solid #f8f8f8;
+    background-color: #fafafa;
+    z-index: 5;
   }
 
   .codeflask__lines__line {
